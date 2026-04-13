@@ -1,0 +1,47 @@
+import numpy as np
+
+def calculate(list):
+    # Check if the list contains exactly 9 numbers
+    if len(list) != 9:
+        raise ValueError("List must contain nine numbers.")
+    
+    # Convert the list into a 3x3 Numpy array
+    matrix = np.array(list).reshape(3, 3)
+    
+    # Calculate mean, variance, standard deviation, max, min, and sum
+    # axis=0 for columns, axis=1 for rows, and no axis for flattened matrix
+    # .tolist() is used to convert the Numpy array back into a Python list
+    calculations = {
+        'mean': [
+            matrix.mean(axis=0).tolist(), 
+            matrix.mean(axis=1).tolist(), 
+            matrix.mean().tolist()
+        ],
+        'variance': [
+            matrix.var(axis=0).tolist(), 
+            matrix.var(axis=1).tolist(), 
+            matrix.var().tolist()
+        ],
+        'standard deviation': [
+            matrix.std(axis=0).tolist(), 
+            matrix.std(axis=1).tolist(), 
+            matrix.std().tolist()
+        ],
+        'max': [
+            matrix.max(axis=0).tolist(), 
+            matrix.max(axis=1).tolist(), 
+            matrix.max().tolist()
+        ],
+        'min': [
+            matrix.min(axis=0).tolist(), 
+            matrix.min(axis=1).tolist(), 
+            matrix.min().tolist()
+        ],
+        'sum': [
+            matrix.sum(axis=0).tolist(), 
+            matrix.sum(axis=1).tolist(), 
+            matrix.sum().tolist()
+        ]
+    }
+
+    return calculations
