@@ -13,6 +13,7 @@ Throughout these projects, I heavily utilize:
 * **Numpy** (Numerical computing and matrix operations)
 * **Pandas** (Data manipulation and cleaning)
 * **Matplotlib & Seaborn** (Data visualization)
+* **SciPy** (Statistical modeling and regression)
 
 ---
 
@@ -21,7 +22,7 @@ Throughout these projects, I heavily utilize:
 - [x] Project 2: Demographic Data Analyzer
 - [x] Project 3: Medical Data Visualizer
 - [x] Project 4: Page View Time Series Visualizer
-- [ ] Project 5: Sea Level Predictor (In Progress)
+- [x] Project 5: Sea Level Predictor
 
 ---
 
@@ -97,4 +98,22 @@ Visualized time series data representing the number of daily page views on the f
 * Gained experience in navigating library version differences (e.g., Pandas 2.0+ strictness regarding Series indexing) during local testing environments.
 
 ---
-*Status: Mastered time-series manipulation. Next step: Entering the realm of predictive analytics with the final project, the Sea Level Predictor!*
+
+### 5. Sea Level Predictor
+**Folder:** `[Sea-Level-Predictor](./Sea-Level-Predictor)`
+
+#### Description:
+Analyzed a dataset of global average sea level changes since 1880. Used statistical modeling to draw lines of best fit and predict future sea level rise through the year 2050.
+
+#### Key Skills & Learning Outcomes:
+* **Predictive Analytics:** Implemented Simple Linear Regression using `scipy.stats.linregress` to extract the slope and y-intercept from historical environmental data.
+* **Data Extrapolation:** Generated future data points using `pd.Series(range(...))` to extend the regression line to the year 2050.
+* **Trend Analysis:** Filtered datasets by specific years (e.g., `>= 2000`) to compare historical long-term trends against recent, accelerated rates of change.
+* **Matplotlib Canvas Control:** Managed current axes using `plt.gca()` to satisfy automated testing environments.
+
+#### Insights:
+* Gained practical experience in mathematical modeling, specifically understanding that regression parameters (slope and intercept) must be computed *before* generating predictive values using the equation $y = mx + c$.
+* Visualized the stark acceleration of sea-level rise; the slope of the data from the year 2000 onwards is noticeably steeper than the historical average from 1880, highlighting a crucial trend for future infrastructure planning.
+
+---
+*Status: 🏆 freeCodeCamp Data Analysis with Python Certification COMPLETE! Ready to apply these skills to real-world data and structural challenges.*
