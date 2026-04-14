@@ -19,8 +19,8 @@ Throughout these projects, I heavily utilize:
 ## 📈 Certification Progress
 - [x] Project 1: Mean-Variance-Standard Deviation Calculator
 - [x] Project 2: Demographic Data Analyzer
-- [ ] Project 3: Medical Data Visualizer (In Progress)
-- [ ] Project 4: Page View Time Series Visualizer
+- [x] Project 3: Medical Data Visualizer
+- [ ] Project 4: Page View Time Series Visualizer (In Progress)
 - [ ] Project 5: Sea Level Predictor
 
 ---
@@ -37,12 +37,10 @@ The goal was to create a function named `calculate()` that uses Numpy to output 
 * **Array Manipulation:** Converting a 1D list into a 2D $3 \times 3$ Numpy array using `.reshape()`.
 * **Axis-Based Operations:** Mastering the difference between `axis=0` (columns), `axis=1` (rows), and flattened calculations.
 * **Data Structure Mapping:** Returning results in a nested dictionary format for structured data access.
-* **Robust Programming:** Implementing `try-except` blocks to handle input errors (e.g., raising a `ValueError` if the list contains fewer than 9 elements).
 
 #### Insights:
 * Understanding the **axis** concept is fundamental for all future data manipulation in Pandas.
 * Learned that Numpy is significantly more efficient for statistical calculations compared to standard Python loops.
-* Gained experience in writing code that must pass pre-defined unit tests (`test_module.py`).
 
 ---
 
@@ -53,15 +51,33 @@ The goal was to create a function named `calculate()` that uses Numpy to output 
 Analyzed demographic data extracted from the 1994 Census database using Pandas to answer specific questions regarding race, age, education, work hours, and salary.
 
 #### Key Skills & Learning Outcomes:
-* **Data Filtering & Boolean Indexing:** Extracting specific subsets of data using conditions (e.g., `df[df['sex'] == 'Male']`) and combining multiple criteria using logical operators (`&`, `~`).
-* **Data Aggregation:** Using `.value_counts()` to count unique categorical values and automatically generate Pandas Series with index labels.
+* **Data Filtering & Boolean Indexing:** Extracting specific subsets of data using conditions and combining multiple criteria.
+* **Data Aggregation:** Using `.value_counts()` to count unique categorical values.
 * **Series Operations:** Dividing two Pandas Series to calculate demographic ratios and percentages.
-* **Statistical Methods:** Applying `.mean()`, `.min()`, `.max()`, and `.idxmax()` to extract numerical insights and identify peak categories.
 
 #### Insights:
-* Discovered the power of **Index Alignment** in Pandas. When dividing two Series, Pandas automatically aligns the data based on matching index labels (e.g., country names), eliminating the need for complex manual loops.
-* Mastered the concept of zero-based indexing for DataFrame dimensions; recognizing that `.shape[0]` acts as a reliable "row counter" to find the exact number of individuals meeting specific criteria.
-* Realized the importance of floating-point precision (`round(..., 1)`) when formatting analytical outputs to pass strict automated testing environments.
+* Discovered the power of **Index Alignment** in Pandas. When dividing two Series, Pandas automatically aligns the data based on matching index labels.
+* Mastered the concept of zero-based indexing for DataFrame dimensions; recognizing that `.shape[0]` acts as a reliable "row counter".
 
 ---
-*Status: Gaining momentum with data wrangling. Next step: Entering the world of data visualization with the Medical Data Visualizer.*
+
+### 3. Medical Data Visualizer
+**Folder:** `[Medical-Data-Visualizer](./Medical-Data-Visualizer)`
+
+#### Description:
+Visualized and explored a medical examination dataset to identify relationships between cardiac disease, body measurements, and lifestyle choices using categorical plots and heatmaps.
+
+#### Key Skills & Learning Outcomes:
+* **Feature Engineering:** Creating an 'overweight' column by calculating BMI ($kg/m^2$) using vectorized operations.
+* **Data Normalization:** Standardizing categorical health markers (cholesterol and glucose) into binary values (0 for good, 1 for bad).
+* **Data Reshaping (Tidy Data):** Using `pd.melt()` to transform the DataFrame into a long format suitable for Seaborn's multi-panel plotting.
+* **Advanced Visualizations:** Implementing `sns.catplot()` for categorical comparisons and `sns.heatmap()` for correlation matrices.
+* **Advanced Data Cleaning:** Filtering out physiological outliers based on height/weight percentiles and blood pressure logic.
+
+#### Insights:
+* Learned how to use `np.triu()` to create a mask for the upper triangle of a correlation matrix, making the heatmap much cleaner and easier to interpret.
+* Recognized that `pd.melt()` is essential for visual comparisons; it allows us to "stack" different variables like smoking, alcohol, and activity into a single chart against cardiovascular health.
+* Understood that in medical datasets, data cleaning is not just about missing values, but also about filtering "impossible" data (like diastolic pressure being higher than systolic).
+
+---
+*Status: Moving from static statistics to time-series analysis. Next step: Visualizing website traffic patterns in the Page View Time Series Visualizer.*
