@@ -20,8 +20,8 @@ Throughout these projects, I heavily utilize:
 - [x] Project 1: Mean-Variance-Standard Deviation Calculator
 - [x] Project 2: Demographic Data Analyzer
 - [x] Project 3: Medical Data Visualizer
-- [ ] Project 4: Page View Time Series Visualizer (In Progress)
-- [ ] Project 5: Sea Level Predictor
+- [x] Project 4: Page View Time Series Visualizer
+- [ ] Project 5: Sea Level Predictor (In Progress)
 
 ---
 
@@ -80,4 +80,21 @@ Visualized and explored a medical examination dataset to identify relationships 
 * Understood that in medical datasets, data cleaning is not just about missing values, but also about filtering "impossible" data (like diastolic pressure being higher than systolic).
 
 ---
-*Status: Moving from static statistics to time-series analysis. Next step: Visualizing website traffic patterns in the Page View Time Series Visualizer.*
+
+### 4. Page View Time Series Visualizer
+**Folder:** `[Page-View-Time-Series-Visualizer](./Page-View-Time-Series-Visualizer)`
+
+#### Description:
+Visualized time series data representing the number of daily page views on the freeCodeCamp forum from May 2016 to December 2019 using line charts, bar charts, and box plots.
+
+#### Key Skills & Learning Outcomes:
+* **Time Series Data Handling:** Parsing dates during CSV import (`parse_dates`) and setting a `DatetimeIndex` to manipulate time-based data.
+* **Data Aggregation & Reshaping:** Utilizing `.groupby()` with multiple keys (year, month) and mastering `.unstack()` to format data perfectly for grouped bar charts.
+* **Multi-plot Visualizations:** Creating side-by-side box plots using Matplotlib subplots (`fig, axes = plt.subplots(1, 2)`) to analyze trend (year-wise) and seasonality (month-wise).
+
+#### Insights:
+* Realized the importance of explicitly defining categorical orders (like month names) in Seaborn (`order=...`) and Pandas to prevent alphabetical sorting from disrupting chronological data.
+* Gained experience in navigating library version differences (e.g., Pandas 2.0+ strictness regarding Series indexing) during local testing environments.
+
+---
+*Status: Mastered time-series manipulation. Next step: Entering the realm of predictive analytics with the final project, the Sea Level Predictor!*
