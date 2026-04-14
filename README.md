@@ -3,9 +3,12 @@ A collection of data analysis projects developed using Python (Pandas, Numpy, Ma
 
 # 📊 freeCodeCamp: Data Analysis with Python
 
-Welcome to my data analysis portfolio! This repository tracks my hands-on progress through the **freeCodeCamp Data Analysis with Python Certification**. 
+Welcome to my data analysis portfolio! This repository tracks my hands-on progress through the **freeCodeCamp Data Analysis with Python Certification**.
 
 Bridging the structured, analytical mindset of an engineering background with the dynamic world of data science, I created this space to document my journey. Here, you'll find a collection of projects that showcase my ability to wrangle messy data, build clear visualizations, and extract actionable insights using Python.
+
+# freeCodeCamp: Data Analysis with Python Certification
+✅ **Certification Verified:** [View Certificate](https://www.freecodecamp.org/certification/fujiana/data-analysis-with-python-v7)
 
 ### 🛠️ Tech Stack & Tools
 Throughout these projects, I heavily utilize:
